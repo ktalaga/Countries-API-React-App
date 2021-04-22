@@ -1,16 +1,17 @@
-import React from 'react';
+// import React from 'react';
 
-const CountryDetail = ({name, onCountryClick, country}) => {
+// const CountryDetail = ({name, onCountryClick, country}) => {
     
-    const handleClick = () => {
-        onCountryClick(country);
-    }
+//     const handleClick = () => {
+//         onCountryClick(country);
+//     }
 
-    return(
-        <div>
-            <li onClick={handleClick}>{name}</li>
-        </div>
-    );
-}
+//     return(
+//         <div>
+//             {/* <option onClick={handleClick}>{name}</option> */}
+//             <p>uj</p>
+//         </div>
+//     );
+// }
 
-export default CountryDetail;
+// export default CountryDetail;
