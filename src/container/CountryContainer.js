@@ -4,6 +4,7 @@ import CountrySelector from '../component/CountrySelector';
 const CountryContainer = () => {
 
     const [countries, setCountries] = useState([])
+    const [selectedCountry, setSelectedCountry] = useState(null)
 
     useEffect(() => {
         fetchCountries()
@@ -15,10 +16,14 @@ const CountryContainer = () => {
         .then(countries => setCountries(countries))
     }
 
+    const onCountryClick = (name) => {
+        console.log(`You clicked on ${name}`)
+    }
+
     return(
         <div>
         <p>This is CountryContainer</p>
-        <CountrySelector countries={countries}/>
+        <CountrySelector countries={countries} onCountryClick={onCountryClick}/>
         </div>
     );
 }

@@ -1,12 +1,14 @@
 import React from 'react';
 
-const CountryDetail = ({countriesSelected}) => {
+const CountryDetail = ({name, onCountryClick}) => {
     
-
+    const handleClick = () => {
+        onCountryClick(name);
+    }
 
     return(
         <div>
-            {countriesSelected}
+            <li onClick={handleClick}>{name}</li>
         </div>
     );
 }
