@@ -1,9 +1,9 @@
 import React from 'react';
 
-const CountryDetail = ({name, onCountryClick}) => {
+const CountryDetail = ({name, onCountryClick, country}) => {
     
     const handleClick = () => {
-        onCountryClick(name);
+        onCountryClick(country);
     }
 
     return(

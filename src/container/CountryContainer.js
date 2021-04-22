@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import CountryDisplayed from '../component/CountryDisplayed';
 import CountrySelector from '../component/CountrySelector';
 
 const CountryContainer = () => {
@@ -16,14 +17,16 @@ const CountryContainer = () => {
         .then(countries => setCountries(countries))
     }
 
-    const onCountryClick = (name) => {
-        console.log(`You clicked on ${name}`)
+    const onCountryClick = (country) => {
+        setSelectedCountry(country);
     }
+
 
     return(
         <div>
         <p>This is CountryContainer</p>
         <CountrySelector countries={countries} onCountryClick={onCountryClick}/>
+        <CountryDisplayed country={selectedCountry}/>
         </div>
     );
 }

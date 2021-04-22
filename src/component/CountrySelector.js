@@ -4,7 +4,7 @@ import CountryDetail from './CountryDetail';
 const CountrySelector = ({countries, onCountryClick}) => {
 
     const countriesSelected = countries.map((country) => {
-        return <CountryDetail name={country.name} key={country.alpha3Code} onCountryClick={onCountryClick}/>
+        return <CountryDetail country = {country} name={country.name} key={country.alpha3Code} onCountryClick={onCountryClick}/>
     });
 
 
