@@ -18,7 +18,7 @@ const CountryContainer = () => {
     return(
         <div>
         <p>This is CountryContainer</p>
-        <CountrySelector/>
+        <CountrySelector countries={countries}/>
         </div>
     );
 }

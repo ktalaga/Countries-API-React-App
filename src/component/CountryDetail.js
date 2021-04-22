@@ -1,11 +1,13 @@
 import React from 'react';
 
-const CountryDetail = () => {
+const CountryDetail = ({countriesSelected}) => {
     
 
 
     return(
-        <p>This is CountryDetail</p>
+        <div>
+            {countriesSelected}
+        </div>
     );
 }
 

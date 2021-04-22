@@ -1,14 +1,18 @@
 import React from 'react';
 import CountryDetail from './CountryDetail';
 
-const CountrySelector = () => {
+const CountrySelector = ({countries}) => {
 
-
+    const countriesSelected = countries.map((country) => {
+        return(<li>{country.name}</li>);
+    });
 
     return(
         <div>
             <p>This is CountrySelector</p>
-            <CountryDetail/>
+            <ul>
+                <CountryDetail countriesSelected={countriesSelected}/>
+            </ul>
         </div>
     );
 }
