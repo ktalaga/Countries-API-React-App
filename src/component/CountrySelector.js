@@ -1,5 +1,6 @@
 import React from 'react';
-import CountryDetail from './CountryDetail';
+import CountryDisplayed from './CountryDisplayed';
+
 
 const CountrySelector = ({countries, onCountryClick}) => {
 
@@ -19,6 +20,7 @@ const CountrySelector = ({countries, onCountryClick}) => {
             <select defaultValue="" onChange={handleChange}>
             <option value="" selected>Choose a Country</option>
             {countriesSelected}
+            <CountryDisplayed/>
         </select>
                 
 

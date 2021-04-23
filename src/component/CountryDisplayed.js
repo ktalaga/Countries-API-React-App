@@ -1,6 +1,12 @@
 import React from 'react';
+import CountryFavs from './CountryFavs';
 
-const CountryDisplayed = ({country}) => {
+const CountryDisplayed = ({country, onFavCountryClick}) => {
+
+    const handleFavCountryClick = function(){
+        onFavCountryClick(country)
+    }
+
     if(country){
         return(
             <div>
@@ -9,7 +15,9 @@ const CountryDisplayed = ({country}) => {
                 <h4>Capital: {country.capital}</h4>
                 <p>Code: {country.alpha3Code}</p>
                 <p>Region: {country.region}</p>
-                <p>Population: {country.population}</p>
+                <p>Population: {country.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+                <button onClick={handleFavCountryClick} >Add to Favs</button>
+                <CountryFavs />
             </div>
         );
     }else{
